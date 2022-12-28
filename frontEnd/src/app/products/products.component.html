@@ -1,0 +1,12 @@
+<div class="container">
+  <h3 class="center">分類: {{proType}}</h3>
+</div>
+
+
+<div *ngFor="let product of productList">
+
+  {{product.name}}<br>
+  {{product.desc}}<br>
+  {{product.price}}<br>
+  {{product.imgUrl}}<hr>
+</div>

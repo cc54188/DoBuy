@@ -1,0 +1,7 @@
+
+<div *ngFor="let proType of proTypeList">
+  商品分類: {{proType.proTypeName}} <br>
+  說明: {{proType.desc}} <br>
+  <button (click)="getProducts(proType.proTypeName)">查看商品</button>
+  <hr>
+</div>
