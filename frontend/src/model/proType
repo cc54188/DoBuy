@@ -1,0 +1,15 @@
+export interface ProType {
+    proTypeId: number;
+
+    proTypeName: string;
+
+    proTypeDesc: string;
+
+    createUser: number; // 創建者userId
+
+    createTime: Date;
+
+    updateUser: number; // 變更者userId
+
+    updateTime: Date;
+}

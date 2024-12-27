@@ -1,0 +1,77 @@
+li {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 新增的部分，將清單移至最左邊 */
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 200px; /* 如果您希望清單的寬度不是全屏，請調整這個值 */
+  background-color: #f0f0f0; /* 清單背景色 */
+}
+
+  /* 將 <p> 元素和 <ul> 元素設置為 Flexbox */
+.home-page-content {
+  display: flex;
+  align-items: center; /* 將內容垂直置中 */
+}
+
+/* 調整 <p> 元素的寬度 */
+.proType {
+  margin-left: 20px; /* 調整 <p> 元素和 <ul> 元素之間的距離 */
+}
+
+.card svg.material-icons path {
+fill: #888;
+}
+
+.card-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+// margin-top: 16px;
+}
+
+.card {
+border-radius: 4px;
+border: 1px solid #eee;
+background-color: #fafafa;
+height: 40px;
+width: 200px;
+// margin: 0 8px 16px; // 會偏上面
+// padding: 16px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+transition: all 0.2s ease-in-out;
+line-height: 24px;
+}
+
+.card-container .card:not(:last-child) {
+margin-right: 0;
+}
+
+.card.card-small {
+height: 30px;
+width: 168px;
+}
+
+.card-container .card:not(.highlight-card) {
+cursor: pointer;
+}
+
+.card-container .card:not(.highlight-card):hover {
+transform: translateY(-3px);
+box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.card-container .card:not(.highlight-card):hover .material-icons path {
+fill: rgb(105, 103, 103);
+}

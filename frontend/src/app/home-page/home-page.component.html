@@ -1,0 +1,16 @@
+<div class="home-page-content">
+  <div class="card-container">
+    <ul>
+      <li *ngFor="let item of items" (click)="onItemClick(item)">
+        <div class="card card-small">{{ item }}</div>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="proType">
+    <img src="assets/proType/item1.png" alt="item1">
+    <img src="assets/proType/item1.png" alt="item1">
+    <p>home-page works!</p>
+  </div>
+  
+</div>

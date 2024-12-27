@@ -1,0 +1,45 @@
+2024-04-28 23:00:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE PRO_TYPE (PRO_TYPE_ID BIGINT NOT NULL AUTO_INCREMENT, CREATE_TIME DATETIME(6), CREATE_USER BIGINT, PRO_TYPE_DESC VARCHAR(2000), PRO_TYPE_NAME VARCHAR(200), UPDATE_TIME DATETIME(6), UPDATE_USER BIGINT, PRIMARY KEY (PRO_TYPE_ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table pro_type (pro_type_id bigint not null auto_increment, create_time datetime(6), create_user bigint, pro_type_desc varchar(2000), pro_type_name varchar(200), update_time datetime(6), update_user bigint, primary key (pro_type_id)) engine=InnoDB [42001-200]
+2024-04-28 23:00:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE PRODUCT (PRODUCT_ID VARCHAR(20) NOT NULL, AMOUNT INTEGER, CREATE_TIME DATETIME(6), CREATE_USER VARCHAR(20), DISCOUNT VARCHAR(1000), PRICE INTEGER, PRO_DESC VARCHAR(1000), PRO_NAME VARCHAR(100), REAL_PRICE INTEGER, SELLER VARCHAR(20), TYPE VARCHAR(20), UPDATE_TIME DATETIME(6), UPDATE_USER VARCHAR(20), PRIMARY KEY (PRODUCT_ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table product (product_id varchar(20) not null, amount integer, create_time datetime(6), create_user varchar(20), discount varchar(1000), price integer, pro_desc varchar(1000), pro_name varchar(100), real_price integer, seller varchar(20), type varchar(20), update_time datetime(6), update_user varchar(20), primary key (product_id)) engine=InnoDB [42001-200]
+2024-04-28 23:00:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE USER (USER_ID BIGINT NOT NULL AUTO_INCREMENT, ACCOUNT VARCHAR(20), PASSWORD VARCHAR(20), TYPE VARCHAR(1), PRIMARY KEY (USER_ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user (user_id bigint not null auto_increment, account varchar(20), password varchar(20), type varchar(1), primary key (user_id)) engine=InnoDB [42001-200]
+2024-04-28 23:00:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE USER_CONTACT (USER_ID BIGINT NOT NULL, IDNO VARCHAR(20) NOT NULL, ADDR_OTHER VARCHAR(100), CITY VARCHAR(6), HOME_TEL VARCHAR(20), MAIL VARCHAR(50), MOBILE_TEL VARCHAR(20), NAME VARCHAR(100), TOWN VARCHAR(6), WORK_TEL VARCHAR(20), ZIP VARCHAR(3), PRIMARY KEY (USER_ID, IDNO)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_contact (user_id bigint not null, idno varchar(20) not null, addr_other varchar(100), city varchar(6), home_tel varchar(20), mail varchar(50), mobile_tel varchar(20), name varchar(100), town varchar(6), work_tel varchar(20), zip varchar(3), primary key (user_id, idno)) engine=InnoDB [42001-200]
+2024-04-28 23:10:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE PRO_TYPE (PRO_TYPE_ID BIGINT NOT NULL AUTO_INCREMENT, CREATE_TIME DATETIME(6), CREATE_USER BIGINT, PRO_TYPE_DESC VARCHAR(2000), PRO_TYPE_NAME VARCHAR(200), UPDATE_TIME DATETIME(6), UPDATE_USER BIGINT, PRIMARY KEY (PRO_TYPE_ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table pro_type (pro_type_id bigint not null auto_increment, create_time datetime(6), create_user bigint, pro_type_desc varchar(2000), pro_type_name varchar(200), update_time datetime(6), update_user bigint, primary key (pro_type_id)) engine=InnoDB [42001-200]
+2024-04-28 23:10:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE PRODUCT (PRODUCT_ID VARCHAR(20) NOT NULL, AMOUNT INTEGER, CREATE_TIME DATETIME(6), CREATE_USER VARCHAR(20), DISCOUNT VARCHAR(1000), PRICE INTEGER, PRO_DESC VARCHAR(1000), PRO_NAME VARCHAR(100), REAL_PRICE INTEGER, SELLER VARCHAR(20), TYPE VARCHAR(20), UPDATE_TIME DATETIME(6), UPDATE_USER VARCHAR(20), PRIMARY KEY (PRODUCT_ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table product (product_id varchar(20) not null, amount integer, create_time datetime(6), create_user varchar(20), discount varchar(1000), price integer, pro_desc varchar(1000), pro_name varchar(100), real_price integer, seller varchar(20), type varchar(20), update_time datetime(6), update_user varchar(20), primary key (product_id)) engine=InnoDB [42001-200]
+2024-04-28 23:10:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE USER (USER_ID BIGINT NOT NULL AUTO_INCREMENT, ACCOUNT VARCHAR(20), PASSWORD VARCHAR(20), TYPE VARCHAR(1), PRIMARY KEY (USER_ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user (user_id bigint not null auto_increment, account varchar(20), password varchar(20), type varchar(1), primary key (user_id)) engine=InnoDB [42001-200]
+2024-04-28 23:10:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE USER_CONTACT (USER_ID BIGINT NOT NULL, IDNO VARCHAR(20) NOT NULL, ADDR_OTHER VARCHAR(100), CITY VARCHAR(6), HOME_TEL VARCHAR(20), MAIL VARCHAR(50), MOBILE_TEL VARCHAR(20), NAME VARCHAR(100), TOWN VARCHAR(6), WORK_TEL VARCHAR(20), ZIP VARCHAR(3), PRIMARY KEY (USER_ID, IDNO)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_contact (user_id bigint not null, idno varchar(20) not null, addr_other varchar(100), city varchar(6), home_tel varchar(20), mail varchar(50), mobile_tel varchar(20), name varchar(100), town varchar(6), work_tel varchar(20), zip varchar(3), primary key (user_id, idno)) engine=InnoDB [42001-200]
+2024-06-22 21:09:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE PRO_TYPE (PRO_TYPE_ID BIGINT NOT NULL AUTO_INCREMENT, CREATE_TIME DATETIME(6), CREATE_USER BIGINT, PRO_TYPE_DESC VARCHAR(2000), PRO_TYPE_NAME VARCHAR(200), UPDATE_TIME DATETIME(6), UPDATE_USER BIGINT, PRIMARY KEY (PRO_TYPE_ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table pro_type (pro_type_id bigint not null auto_increment, create_time datetime(6), create_user bigint, pro_type_desc varchar(2000), pro_type_name varchar(200), update_time datetime(6), update_user bigint, primary key (pro_type_id)) engine=InnoDB [42001-200]
+2024-06-22 21:09:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE PRODUCT (PRODUCT_ID VARCHAR(20) NOT NULL, AMOUNT INTEGER, CREATE_TIME DATETIME(6), CREATE_USER VARCHAR(20), DISCOUNT VARCHAR(1000), PRICE INTEGER, PRO_DESC VARCHAR(1000), PRO_NAME VARCHAR(100), REAL_PRICE INTEGER, SELLER VARCHAR(20), TYPE VARCHAR(20), UPDATE_TIME DATETIME(6), UPDATE_USER VARCHAR(20), PRIMARY KEY (PRODUCT_ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table product (product_id varchar(20) not null, amount integer, create_time datetime(6), create_user varchar(20), discount varchar(1000), price integer, pro_desc varchar(1000), pro_name varchar(100), real_price integer, seller varchar(20), type varchar(20), update_time datetime(6), update_user varchar(20), primary key (product_id)) engine=InnoDB [42001-200]
+2024-06-22 21:09:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE USER (USER_ID BIGINT NOT NULL AUTO_INCREMENT, ACCOUNT VARCHAR(20), PASSWORD VARCHAR(20), TYPE VARCHAR(1), PRIMARY KEY (USER_ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user (user_id bigint not null auto_increment, account varchar(20), password varchar(20), type varchar(1), primary key (user_id)) engine=InnoDB [42001-200]
+2024-06-22 21:09:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE USER_CONTACT (USER_ID BIGINT NOT NULL, IDNO VARCHAR(20) NOT NULL, ADDR_OTHER VARCHAR(100), CITY VARCHAR(6), HOME_TEL VARCHAR(20), MAIL VARCHAR(50), MOBILE_TEL VARCHAR(20), NAME VARCHAR(100), TOWN VARCHAR(6), WORK_TEL VARCHAR(20), ZIP VARCHAR(3), PRIMARY KEY (USER_ID, IDNO)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_contact (user_id bigint not null, idno varchar(20) not null, addr_other varchar(100), city varchar(6), home_tel varchar(20), mail varchar(50), mobile_tel varchar(20), name varchar(100), town varchar(6), work_tel varchar(20), zip varchar(3), primary key (user_id, idno)) engine=InnoDB [42001-200]
+2024-06-22 23:50:09 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRO_TYPE" not found; SQL statement:
+SELECT * FROM pro_type [42102-200]
+2024-06-22 23:50:59 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCT" not found; SQL statement:
+SELECT * FROM product [42102-200]
+2024-06-22 23:54:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USER USER USER_CONTACT[*]"; SQL statement:
+SELECT * FROM USER USER USER_CONTACT [42000-200]
