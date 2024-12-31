@@ -1,0 +1,44 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-2204:current
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y openjdk-17-jdk maven
+      - run:
+          name: Build Spring Boot JAR
+          command: mvn clean package
+      - persist_to_workspace:
+          root: .
+          paths:
+            - target/DoBuy-0.0.1-SNAPSHOT.jar
+
+  deploy:
+    machine:
+      image: ubuntu-2204:current
+    steps:
+      - attach_workspace:
+          at: /workspace
+      - run:
+          name: Deploy to Remote Server
+          command: |
+            scp /workspace/target/your-app-0.0.1-SNAPSHOT.jar handsomets9@104.199.189.44:/home/user/app/
+            ssh user@your-server << EOF
+              pkill -f 'DoBuy-0.0.1-SNAPSHOT.jar' || true
+              nohup java -jar /home/user/app/DoBuy-0.0.1-SNAPSHOT.jar > /home/user/app/app.log 2>&1 &
+            EOF
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
