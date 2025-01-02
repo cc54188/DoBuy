@@ -28,11 +28,11 @@ jobs:
       - run:
           name: Deploy to Remote Server
           command: |
-            scp /workspace/target/your-app-0.0.1-SNAPSHOT.jar handsomets9@104.199.189.44:/home/handsomets9/app/
-            ssh handsomets9@104.199.189.44 << EOF
+            scp /workspace/target/DoBuy-0.0.1-SNAPSHOT.jar handsomets9@104.199.189.44:/home/handsomets9/app/
+            ssh handsomets9@104.199.189.44 "
               pkill -f 'DoBuy-0.0.1-SNAPSHOT.jar' || true
               nohup java -jar /home/handsomets9/app/DoBuy-0.0.1-SNAPSHOT.jar > /home/handsomets9/app/app.log 2>&1 &
-            EOF
+            "
 
 workflows:
   version: 2
