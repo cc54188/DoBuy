@@ -28,10 +28,10 @@ jobs:
       image: ubuntu-2204:current
     steps:
       - attach_workspace:
-          at: /backend
+          at: /home/handsomets9
       - run:
           name: Verify Workspace Contents
-          command: ls -al /backend
+          command: ls -al /home/handsomets9
       - run:
           name: Deploy to Remote Server
           command: |
