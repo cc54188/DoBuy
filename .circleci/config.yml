@@ -13,9 +13,10 @@ jobs:
             sudo apt-get install -y openjdk-17-jdk maven
       - run:
           name: Build Spring Boot JAR
+          working_directory: ./backend
           command: mvn clean package
       - persist_to_workspace:
-          root: .
+          root: ./backend
           paths:
             - target/DoBuy-0.0.1-SNAPSHOT.jar
 
