@@ -21,7 +21,7 @@ jobs:
       - persist_to_workspace:
           root: ./backend
           paths:
-            - target/DoBuy-0.0.1-SNAPSHOT.jar
+            - target
 
   deploy:
     machine:
@@ -31,7 +31,7 @@ jobs:
           at: /workspace
       - run:
           name: Verify Workspace Contents
-          command: ls -al /workspace
+          command: ls -al /workspace/target
       - run:
           name: Deploy to Remote Server
           command: |
