@@ -28,17 +28,17 @@ jobs:
       image: ubuntu-2204:current
     steps:
       - attach_workspace:
-          at: /workspace
+          at: /backend
       - run:
           name: Verify Workspace Contents
-          command: ls -al /workspace
+          command: ls -al /backend
       - run:
           name: Deploy to Remote Server
           command: |
-            scp /workspace/DoBuy-0.0.1-SNAPSHOT.jar handsomets9@104.199.189.44:/home/handsomets9/app/
+            scp ./backend/DoBuy-0.0.1-SNAPSHOT.jar handsomets9@104.199.189.44:/home/handsomets9/app/
             ssh handsomets9@104.199.189.44 "
               pkill -f 'DoBuy-0.0.1-SNAPSHOT.jar' || true
-              nohup java -jar /home/handsomets9/app/DoBuy-0.0.1-SNAPSHOT.jar > /home/handsomets9/app/app.log 2>&1 &
+              nohup java -jar /home/handsomets9/DoBuy-0.0.1-SNAPSHOT.jar > /home/handsomets9/app/app.log 2>&1 &
             "
 
 workflows:
