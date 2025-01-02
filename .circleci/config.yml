@@ -15,6 +15,9 @@ jobs:
           name: Build Spring Boot JAR
           working_directory: ./backend
           command: mvn clean package
+      - run:
+          name: Verify Build Artifacts
+          command: ls -al ./backend/target
       - persist_to_workspace:
           root: ./backend
           paths:
@@ -26,6 +29,9 @@ jobs:
     steps:
       - attach_workspace:
           at: /workspace
+      - run:
+          name: Verify Workspace Contents
+          command: ls -al /workspace
       - run:
           name: Deploy to Remote Server
           command: |
