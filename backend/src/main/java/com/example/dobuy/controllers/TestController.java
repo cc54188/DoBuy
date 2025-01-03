@@ -23,9 +23,9 @@ public class TestController {
     @GetMapping("/proType/getAll")
     public ResponseEntity<List<ProType>> getAllProType() throws URISyntaxException {
         List<ProType> list = new ArrayList<>();
-        list.add(new ProType(1, "testType1", "testDesc1", 1, Instant.now(), 1, Instant.now()));
+        list.add(new ProType(1, "測試25", "testDesc1", 1, Instant.now(), 1, Instant.now()));
         list.add(new ProType(2, "testType2", "testDesc2", 1, Instant.now(), 1, Instant.now()));
-        list.add(new ProType(4, "testType3", "testDesc3", 1, Instant.now(), 1, Instant.now()));
+        list.add(new ProType(3, "testType3", "testDesc3", 1, Instant.now(), 1, Instant.now()));
         log.info("測試成功");
         return ResponseEntity.ok(list);
     }
