@@ -29,9 +29,6 @@ jobs:
     steps:
       - attach_workspace:
           at: /home/circleci/project/backend
-      - add_ssh_keys:
-          fingerprints:
-            - "your-ssh-key-fingerprint" # 這是 CircleCI 中的 SSH 鍵指紋
       - run:
           name: Verify Workspace Contents
           command: ls -al /home/circleci/project/backend/target
