@@ -38,11 +38,8 @@ jobs:
       - run:
           name: Deploy to Remote Server
           command: |
-            scp /home/circleci/project/backend/target/DoBuy-0.0.1-SNAPSHOT.jar handsomets9@104.199.189.44:/home/handsomets9/DoBuy-0.0.1-SNAPSHOT.jar
-            ssh handsomets9@104.199.189.44 "
-              pkill -f 'DoBuy-0.0.1-SNAPSHOT.jar' || true
-              nohup java -jar /home/handsomets9/DoBuy-0.0.1-SNAPSHOT.jar > /home/handsomets9/app.log 2>&1 &
-            "
+              scp /home/circleci/project/backend/target/DoBuy-0.0.1-SNAPSHOT.jar handsomets9@104.199.189.44:/home/handsomets9/DoBuy-0.0.1-SNAPSHOT.jar
+              ssh handsomets9@104.199.189.44 "bash /home/handsomets9/deploy.sh"
 
 workflows:
   version: 2
